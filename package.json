@@ -1,6 +1,6 @@
 {
   "name": "boilerplates-generators",
-  "version": "1.1.37",
+  "version": "1.1.38",
   "description": "boilerplates-generators for Next.js and React projects",
   "main": "index.mjs",
   "bin": {
