@@ -8,11 +8,12 @@ import color from "picocolors";
 import prompts from "prompts";
 import yargs from "yargs";
 import {hideBin} from "yargs/helpers";
+import {exec} from "child_process"; // Importa exec de child_process para ejecutar comandos de terminal
 
 // List of templates
 const TEMPLATES = [
   {
-    title: "Bolerplate of authentication with Next.js + Shadcn/ui + Prisma + Docker + Next-auth",
+    title: "Boilerplate of authentication with Next.js + Shadcn/ui + Prisma + Docker + Next-auth",
     value: "boilerplate-auth",
   },
   {
@@ -125,7 +126,7 @@ const args = yargs(hideBin(process.argv)).options({
   },
 });
 
-// Orverride arguments passed on the CLI
+// Override arguments passed on the CLI
 prompts.override(args.argv);
 
 async function main() {
@@ -177,7 +178,7 @@ async function main() {
   const destination = path.join(process.cwd(), project.name);
 
   // Get the extras for the selected template
-  let extras: string[] = [];
+  let extras = [];
 
   if (EXTRAS[project.template]) {
     const {extras: results} = await prompts({
@@ -221,10 +222,32 @@ async function main() {
   if (extras.length) {
     console.log(
       `\nCheck out ${color.italic(
-        extras.map((extra) => `${extra.toUpperCase()}.md`).join(", "),
+        extras.map((extra: string) => `${extra.toUpperCase()}.md`).join(", "),
       )} for more info on how to use it.`,
     );
   }
+
+  // Initialize Git repository
+  await initializeGitRepository(destination);
+}
+
+async function initializeGitRepository(destination) {
+  return new Promise((resolve, reject) => {
+    exec(`git init ${destination}`, (error, stdout, stderr) => {
+      if (error) {
+        reject(`Error al inicializar el repositorio Git: ${error.message}`);
+        return;
+      }
+      if (stderr) {
+        reject(`Error al inicializar el repositorio Git: ${stderr}`);
+        return;
+      }
+      resolve(stdout.trim());
+    });
+  }).then((result) => {
+    console.log("✔️ Repositorio Git inicializado correctamente.");
+    return result;
+  });
 }
 
 // Run the main function
