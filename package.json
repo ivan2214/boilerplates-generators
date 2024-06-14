@@ -1,0 +1,43 @@
+{
+  "name": "boilerplates-generators",
+  "version": "1.1.36",
+  "description": "boilerplates-generators for Next.js and React projects",
+  "main": "index.mjs",
+  "bin": {
+    "boilerplates-generators": "dist/index.js"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "react",
+    "next.js",
+    "shadcn",
+    "tailwindcss",
+    "prisma",
+    "docker",
+    "next-auth"
+  ],
+  "author": "ivan2214",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^10.3.5",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "yargs": "^17.7.2"
+  },
+  "scripts": {
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "dev": "tsup --watch",
+    "bump": "pnpm build && pnpm version patch && git tag latest --force && git push origin main --tags --force && pnpm publish --tag latest --force"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/prompts": "^2.4.9",
+    "@types/yargs": "^17.0.32",
+    "prettier": "^3.0.3",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
