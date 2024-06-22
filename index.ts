@@ -13,6 +13,10 @@ import {exec} from "child_process"; // Importa exec de child_process para ejecut
 // List of templates
 const TEMPLATES = [
   {
+    title: "Boilerplate authentication with Next.js + Shadcn/ui + Prisma + Docker",
+    value: "boilerplate-prisma-docker",
+  },
+  {
     title: "Boilerplate of authentication with Next.js + Shadcn/ui + Prisma + Docker + Next-auth",
     value: "boilerplate-auth",
   },
@@ -85,6 +89,32 @@ const EXTRAS = {
     },
   ],
   "boilerplate-auth": [
+    {
+      title: "Mercado Pago",
+      value: "mercadopago",
+    },
+    {
+      title: "Kinde Auth",
+      value: "kinde",
+    },
+    {
+      title: "Clerk Auth",
+      value: "clerk",
+    },
+    {
+      title: "Auth0",
+      value: "auth0",
+    },
+    {
+      title: "Supabase",
+      value: "supabase",
+    },
+    {
+      title: "libSQL + Drizzle",
+      value: "libsql",
+    },
+  ],
+  "boilerplate-prisma-docker": [
     {
       title: "Mercado Pago",
       value: "mercadopago",
