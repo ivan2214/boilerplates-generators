@@ -2,6 +2,12 @@
 
 boilerplates-generators for Next.js projects or React projects.
 
+## Installation
+
+```bash
+pnpm install -g boilerplates-generators
+```
+
 ## Usage
 
 ```bash
@@ -18,10 +24,20 @@ pnpm create boilerplates-generators --name <name>
 pnpm create boilerplates-generators --help
 ```
 
-## Installation
+## Or Usage
 
 ```bash
-pnpm install -g boilerplates-generators
+# Interactive mode
+boilerplates-generators
+
+# Override template
+boilerplates-generators --template <template>
+
+# Override name
+boilerplates-generators --name <name>
+
+# Get Command help
+boilerplates-generators --help
 ```
-# boilerplates-generatorss
-# boilerplates-generators
+
+### Any questions? Feel free to open an issue or send a message to [x](https://x.com/bongiovanniDev)
