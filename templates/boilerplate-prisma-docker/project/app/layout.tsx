@@ -9,8 +9,8 @@ import {Toaster} from "@/components/ui/sonner"
 const inter = Inter({subsets: ["latin"]})
 
 export const metadata: Metadata = {
-  title: "X",
-  description: "X",
+  title: "Boilerplate Prisma Docker",
+  description: "Boilerplate Prisma Docker",
 }
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={cn("dark bg-black", inter.className)}>
+      <body className={cn("dark", inter.className)}>
         <Toaster />
 
         {children}
