@@ -32,6 +32,10 @@ const TEMPLATES = [
     title: "React (vite) + ESLint + TypeScript + Tailwind",
     value: "react-eslint-ts-tw",
   },
+  {
+    title: "NodeJS + Express + TypeScript + Jest + Nodemon + BiomeJS",
+    value: "node-express-ts-jest-nodemon-biomejs",
+  },
 ];
 
 // List of extras
@@ -140,6 +144,7 @@ const EXTRAS = {
       value: "libsql",
     },
   ],
+  "node-express-ts-jest-nodemon-biomejs": [],
 };
 
 // Specify CLI arguments
