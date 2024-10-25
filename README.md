@@ -12,7 +12,7 @@ pnpm install -g boilerplates-generators
 
 ```bash
 # Interactive mode
-pnpm create boilerplates-generators
+pnpm create boilerplates-generators || boilerplates-generators
 
 # Override template
 pnpm create boilerplates-generators --template <template>

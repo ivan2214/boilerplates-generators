@@ -16,7 +16,15 @@
     "tailwindcss",
     "prisma",
     "docker",
-    "next-auth"
+    "next-auth",
+    "express",
+    "biomejs",
+    "jest",
+    "node",
+    "typescript",
+    "js",
+    "ts",
+    "json"
   ],
   "author": "ivan2214",
   "license": "ISC",

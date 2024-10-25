@@ -144,7 +144,6 @@ const EXTRAS = {
       value: "libsql",
     },
   ],
-  "node-express-ts-jest-nodemon-biomejs": [],
 };
 
 // Specify CLI arguments
